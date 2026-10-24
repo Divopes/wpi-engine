@@ -1,0 +1,29 @@
+#include <windows.h>
+
+/* Иконка: положите src/wpi.ico и раскомментируйте строку ниже */
+/* 1 ICON "wpi.ico" */
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "wpi.manifest"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     2,0,0,0
+PRODUCTVERSION  2,0,0,0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041904B0"
+        BEGIN
+            VALUE "FileDescription", "Windows Post-Install 2.0"
+            VALUE "FileVersion",     "2.0.0.0"
+            VALUE "ProductName",     "Windows Post-Install"
+            VALUE "ProductVersion",  "2.0.0.0"
+            VALUE "OriginalFilename", "wpi.exe"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0419, 1200
+    END
+END

@@ -1,0 +1,72 @@
+// Набор программ для Windows Post-Install 2.0.
+// Пути — относительно папки с wpi.exe. Пишите "install/7z.exe" или "install\\7z.exe".
+{
+    "title": "Windows Post-Install 2.0",
+    "timer": 0,         // автоустановка через N секунд; 0 — выключено
+    "reboot": false,    // галочка «Перезагрузить после» по умолчанию
+
+    "software": [
+        {
+            "name": "7-Zip 23.01 (x64)",
+            "cat": "Архиваторы",
+            "desc": "Свободный архиватор с высокой степенью сжатия",
+            "exe": "install/7z2301-x64.exe",
+            "flag": "x64",
+            "support_xp": false,
+            "support_7": true,
+            "install_dflt": true,
+            "silent_supported": true,
+            "silent_dflt": true,
+            "silent_args": "/S",
+            "normal_args": "",
+            "lock_silent_choice": false
+        },
+        {
+            "name": "7-Zip 23.01 (x86)",
+            "cat": "Архиваторы",
+            "exe": "install/7z2301.exe",
+            "flag": "x86",
+            "support_xp": true,
+            "install_dflt": true,
+            "silent_supported": true,
+            "silent_args": "/S"
+        },
+        {
+            "name": "WinRAR (Legacy)",
+            "cat": "Архиваторы",
+            "exe": "install/winrar.exe",
+            "flag": "x86",
+            "support_xp": true,
+            "install_dflt": false,
+            "silent_supported": true,
+            "silent_dflt": true,
+            "silent_args": "/S",
+            "lock_silent_choice": true
+        },
+        {
+            "name": "Mozilla Firefox",
+            "cat": "Интернет",
+            "exe": "install/Firefox Setup.msi",
+            "support_xp": false,
+            "install_dflt": true,
+            "silent_supported": true,
+            "silent_args": "/qn /norestart"
+        },
+        {
+            "name": "Твики проводника",
+            "cat": "Настройка системы",
+            "desc": "Показывать расширения и скрытые файлы",
+            "exe": "tweaks/explorer.reg",
+            "install_dflt": true
+        },
+        {
+            "name": "Скрипт после установки",
+            "cat": "Настройка системы",
+            "exe": "tweaks/finish.cmd",
+            "install_dflt": false,
+            "silent_supported": true,
+            "silent_args": "/quiet",
+            "normal_args": ""
+        }
+    ]
+}
